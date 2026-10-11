@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 9 English Study Notes - Pratap Sanjay Sir</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --paper-bg: #fdfbf7;
+      --line-color: rgba(65, 117, 164, 0.22);
+      --margin-color: rgba(239, 68, 68, 0.45);
+      --font-body: 'Lora', serif;
+      --font-hand: 'Kalam', cursive;
+      --font-accent: 'Caveat', cursive;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #2b303a;
+      color: #262626;
+      line-height: 1.8;
+    }
+
+    .handwriting {
+      font-family: var(--font-hand);
+    }
+
+    .accent-notes {
+      font-family: var(--font-accent);
+    }
+
+    /* Classic Lined Ruled Notebook Paper Style */
+    .notebook-paper {
+      background-color: var(--paper-bg);
+      background-image: 
+        linear-gradient(to right, var(--margin-color) 1px, transparent 1px),
+        linear-gradient(var(--line-color) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 32px;
+      background-position: 52px 0, 0 8px;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    @media (max-width: 640px) {
+      .notebook-paper {
+        background-position: 28px 0, 0 8px;
+      }
+    }
+
+    /* Binder Holes Decoration */
+    .binder-holes::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 14px;
+      width: 14px;
+      background-image: radial-gradient(circle, #e2e8f0 3px, #cbd5e1 5px, rgba(0,0,0,0.12) 6px, transparent 7px);
+      background-size: 14px 128px;
+      background-repeat: repeat-y;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    @media (max-width: 640px) {
+      .binder-holes::before {
+        display: none;
+      }
+    }
+
+    /* Sticky Note Styling */
+    .sticky-note {
+      background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%);
+      box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.12);
+      transform: rotate(-1deg);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sticky-note:hover {
+      transform: rotate(0deg) scale(1.02);
+      box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    /* Yellow Highlighter Marker Effect */
+    .highlight-marker {
+      background: linear-gradient(104deg, rgba(254, 240, 138, 0.8) 0.9%, rgba(253, 224, 71, 0.6) 98.4%);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .highlight-green {
+      background: linear-gradient(104deg, rgba(187, 247, 208, 0.8) 0.9%, rgba(134, 239, 172, 0.5) 98.4%);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .highlight-pink {
+      background: linear-gradient(104deg, rgba(251, 207, 232, 0.8) 0.9%, rgba(244, 114, 182, 0.4) 98.4%);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* Smooth accordion arrow transition */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Print Optimization */
+    @media print {
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .notebook-paper {
+        box-shadow: none !important;
+        border: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-image: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen py-4 md:py-10 px-2 sm:px-4 md:px-8 selection:bg-amber-200">
+
+  <header class="max-w-5xl mx-auto mb-6 no-print">
+    <div class="bg-slate-800/90 backdrop-blur-md text-white rounded-2xl p-4 shadow-xl border border-slate-700/60 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400 font-bold text-xl shadow-inner">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <div>
+          <h1 class="text-lg md:text-xl font-bold tracking-tight text-amber-200 font-sans">CBSE Class 9 English Notes</h1>
+          <p class="text-xs text-slate-300">Curated & Guided by <span class="font-semibold text-amber-400">Pratap Sanjay Sir</span></p>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button onclick="toggleAllAccordions()">
+          <i class="fa-solid fa-arrows-up-down text-amber-300"></i> Kaveri
+        </button>
+        <button onclick="window.print()" class="px-3 py-1.5 bg-amber-600 hover:bg-amber-500 active:scale-95 text-xs text-white rounded-lg transition-all flex items-center gap-1.5 shadow">
+          <i class="fa-solid fa-print"></i> Print Notes
+        </button>
+      </div>
+    </div>
+
+    <!-- Chapter Selector Tabs -->
+    <div class="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
+      <button onclick="filterChapter('all')" id="tab-all" class="tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-amber-500 text-slate-900 border-2 border-amber-400">
+        <i class="fa-solid fa-layer-group mr-1.5"></i> Complete Study Notes
+      </button>
+      <button onclick="filterChapter('chapter1')" id="tab-ch1" class="tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700">
+        <i class="fa-solid fa-feather mr-1.5 text-amber-400"></i> Ch 1 Prose: How I Taught My Grandmother
+      </button>
+      <button onclick="filterChapter('chapter2')" id="tab-ch2" class="tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700">
+        <i class="fa-solid fa-om mr-1.5 text-emerald-400"></i> Ch 1 Poetry: Bharat Our Land
+      </button>
+      <button onclick="openQuizModal()" class="px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-emerald-600 hover:bg-emerald-500 text-white ml-auto">
+        <i class="fa-solid fa-circle-question mr-1.5"></i> Quick Practice Quiz
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto notebook-paper binder-holes rounded-2xl md:rounded-3xl border-2 border-amber-900/10 p-4 sm:p-8 md:p-14 relative overflow-hidden transition-all duration-300">
+    
+    <!-- Top Notebook Header / Date line decoration -->
+    <div class="flex flex-wrap items-center justify-between border-b-2 border-slate-400/40 pb-3 mb-8 pl-8 sm:pl-12">
+      <div class="accent-notes text-2xl md:text-3xl font-bold text-slate-700 tracking-wide flex items-center gap-2">
+        <span class="w-3.5 h-3.5 rounded-full bg-red-400 inline-block"></span>
+        Classroom Notes • English Literature (Class IX)
+      </div>
+      <div class="handwriting text-slate-600 text-sm md:text-base flex items-center gap-4">
+        <span><strong class="font-bold text-slate-800">Teacher:</strong> Pratap Sanjay Sir</span>
+        <span class="hidden sm:inline">|</span>
+        <span><strong class="font-bold text-slate-800">Revision:</strong> Term Exam Special</span>
+      </div>
+    </div>
+
+    <section id="chapter1-section" class="chapter-content mb-14 pl-8 sm:pl-12 transition-all">
+      
+      <!-- Chapter Badge Banner -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 text-amber-900 border border-amber-300 rounded-lg text-xs md:text-sm font-semibold tracking-wide uppercase">
+          <i class="fa-solid fa-bookmark text-amber-600"></i> Chapter 01 Prose
+        </div>
+        <span class="handwriting text-amber-800 text-sm font-semibold">Author: Sudha Murty</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-2 font-serif border-b border-dashed border-slate-300 pb-2">
+        How I Taught My Grandmother to Read
+      </h2>
+      <p class="text-sm md:text-base text-slate-600 italic mb-6">
+        "A deeply inspiring real-life incident celebrating the zeal (उत्साह) for education, respect for teachers, and the ageless spirit of learning."
+      </p>
+
+      <!-- Sticky Note Quick Insight -->
+      <div class="my-6 sticky-note p-4 sm:p-5 rounded-lg border-l-4 border-amber-500 max-w-xl mx-auto sm:ml-4">
+        <div class="handwriting text-slate-900 text-base md:text-lg">
+          <span class="font-bold text-amber-900 block text-lg mb-1"><i class="fa-regular fa-lightbulb text-amber-600 mr-2"></i>Core Essence of the Story (कहानी का मुख्य संदेश):</span>
+          Learning has no age bar (सीखने की कोई उम्र सीमा नहीं होती)! With unyielding determination (अटल दृढ़ संकल्प) and hard work, 62-year-old Krishtakka transformed her helplessness (लाचारी) into empowering self-reliance (आत्मनिर्भरता).
+        </div>
+      </div>
+
+      <!-- Character Profiles Grid -->
+      <div class="mb-8">
+        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-users text-amber-600"></i> Dramatis Personae (Key Characters / मुख्य पात्र)
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow transition">
+            <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span> Sudha Murty (The Narrator / कथावाचिका)
+            </h4>
+            <p class="text-sm text-slate-700 mt-1">
+              A 12-year-old granddaughter residing in a quiet village of North Karnataka. Loving, bright, and empathetic (संवेदनशील), she becomes her grandmother's dedicated and affectionate (स्नेहशील) tutor (शिक्षिका).
+            </p>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow transition">
+            <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Krishtakka (Avva / दादी माँ)
+            </h4>
+            <p class="text-sm text-slate-700 mt-1">
+              The 62-year-old grandmother. Illiterate (निरक्षर/अनपढ़) because early marriage and domestic chores prevented schooling, but possessed extraordinary grit (दृढ़ इच्छाशक्ति), razor-sharp memory, and an ardent (उत्कट/तीव्र) passion to learn.
+            </p>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow transition">
+            <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> Triveni (Renowned Kannada Author / प्रसिद्ध कन्नड़ लेखिका)
+            </h4>
+            <p class="text-sm text-slate-700 mt-1">
+              A celebrated Kannada novelist. Her serialised (धारावाहिक) stories dealt with realistic, complex psychological (मनोवैज्ञानिक) struggles of ordinary rural folks with genuine empathy.
+            </p>
+          </div>
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200/80 shadow-sm hover:shadow transition">
+            <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> <em>Kashi Yatre</em> (The Serialised Novel / उपन्यास)
+            </h4>
+            <p class="text-sm text-slate-700 mt-1">
+              Triveni's celebrated novel in the weekly magazine <em>Karmaveera</em>. An elderly woman sacrifices her pilgrimage (तीर्थयात्रा) savings to marry off a destitute (बेसहारा/दीन-हीन) orphan girl, placing human compassion (दया/करुणा) above religious rituals (धार्मिक कर्मकांड).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/70 backdrop-blur-sm p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm mb-8">
+        <h3 class="text-xl font-bold text-slate-850 mb-3 flex items-center gap-2 text-slate-900">
+          <i class="fa-solid fa-list-check text-indigo-600"></i> Comprehensive Summary & Plot Flow (विस्तृत सारांश)
+        </h3>
+        <div class="space-y-4 text-slate-800 text-sm sm:text-base leading-relaxed">
+          <p>
+            <strong class="text-slate-950">1. Life in the Village & The Karmaveera Weekly:</strong>
+            When Sudha Murty was around 12 years old, transport facilities (यातायात साधन) in remote North Karnataka villages were poor, causing newspapers and weekly magazines to arrive with a delay. Triveni was the most popular Kannada writer of that era. Her novel <span class="highlight-marker">Kashi Yatre</span> was published in weekly installments in <em>Karmaveera</em>.
+          </p>
+          <p>
+            <strong class="text-slate-950">2. Avva's Weekly Ritual & Deep Attachment:</strong>
+            Grandmother Krishtakka had never attended school due to childhood poverty and early marriage. However, she was deeply captivated (आकर्षित) by <em>Kashi Yatre</em>. Every Wednesday, the young narrator would read the latest episode aloud. Avva listened with rapt concentration (एकाग्रता), memorised each scene, and later engaged in lively debates (चर्चा/बहस) about the heroine’s selfless choices with friends at the temple courtyard.
+          </p>
+          <p>
+            <strong class="text-slate-950">3. The Crisis of Helplessness (लाचारी और दुख का क्षण):</strong>
+            The narrator left the village for a week to attend a relative's wedding in a neighbouring village. In her absence, the weekly edition arrived. Krishtakka desperately wanted to know the climax (चरमोत्कर्ष), opened the magazine, lovingly touched the Kannada letters and pictures, but could not decipher (पढ़/समझ) a single syllable. Her inability brought agonizing (अत्यधिक कष्टकारी) tears of embarrassment (शर्मिंदगी) and inadequacy.
+          </p>
+          <p>
+            <strong class="text-slate-950">4. The Vow at Sixty-Two (62 वर्ष की उम्र में दृढ़ संकल्प):</strong>
+            Upon her granddaughter’s return, Krishtakka tearfully confessed her deep sorrow. Refusing to remain dependent (आश्रित) on others, she firmly announced: <span class="highlight-pink">"For learning there is no age bar."</span> (सीखने की कोई उम्र नहीं होती)। She resolved (संकल्प लिया) to master the Kannada alphabet and set a strict deadline: the auspicious Saraswati Puja day during <strong>Dassara (Vijayadashami)</strong>.
+          </p>
+          <p>
+            <strong class="text-slate-950">5. Relentless Practice & The Ultimate Reverence (श्रद्धा और कृतज्ञता):</strong>
+            Avva practiced tirelessly—reciting, writing, and doing homework late into the night. By Dassara, she read <em>Kashi Yatre</em> fluently and independently. In a deeply poignant (हृदयस्पर्शी) gesture, Avva bent down and <span class="highlight-green">touched the feet of her 12-year-old granddaughter</span>. When the surprised child asked why, Avva explained that she was honoring a <strong>Guru / Teacher</strong> who had guided her from the darkness of illiteracy into the light of knowledge, fulfilling the sacred ethos (संस्कार) that a teacher must be respected irrespective (बिना भेदभाव) of age or gender.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Key Themes -->
+        <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200">
+          <h4 class="font-bold text-amber-950 text-base mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-compass-drafting text-amber-700"></i> Major Themes to Remember (मुख्य विषय)
+          </h4>
+          <ul class="space-y-2 text-sm text-slate-800">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-amber-600 mt-1"></i>
+              <span><strong>Lifelong Learning:</strong> Education transcends (परे है) age, physical barriers, and social conventions.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-amber-600 mt-1"></i>
+              <span><strong>Empowerment & Self-Respect:</strong> Literacy transforms helpless dependency into dignified autonomy (स्वायत्तता).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-amber-600 mt-1"></i>
+              <span><strong>Reverence for Teachers (गुरु-सम्मान):</strong> Sincere gratitude acknowledges wisdom and guidance, ignoring chronological age.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-amber-600 mt-1"></i>
+              <span><strong>Compassion over Ritual (कर्मकांड से बढ़कर दया):</strong> As seen in Triveni's story, helping human beings in distress is superior to external pilgrimages.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Rapid Revision Flash Box -->
+        <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-bolt text-amber-500"></i> Fast Exam Bullet Points (त्वरित पुनरावृत्ति)
+          </h4>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-700 handwriting font-semibold">
+            <li>✔ Written by renowned author & philanthropist (परोपकारी) Sudha Murty.</li>
+            <li>✔ Grandmother's name: Krishtakka (Avva = Mother in Kannada).</li>
+            <li>✔ Novel serial: <em>Kashi Yatre</em> by Triveni in weekly <em>Karmaveera</em>.</li>
+            <li>✔ Felt helpless (असहाय) when narrator was away at a wedding.</li>
+            <li>✔ Age when Krishtakka started learning: <strong>62 years</strong>.</li>
+            <li>✔ Target deadline achieved: <strong>Saraswati Puja during Dassara</strong>.</li>
+            <li>✔ Grandmother touched granddaughter’s feet as respect to her dedicated teacher.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="space-y-3 mb-6">
+        <h3 class="text-xl font-bold text-slate-850 flex items-center gap-2 text-slate-900">
+          <i class="fa-solid fa-circle-question text-amber-600"></i> Important Exam Questions & Answers
+        </h3>
+
+        <!-- Q1 -->
+        <details class="group bg-white/90 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <summary class="p-4 cursor-pointer flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Q1. Why did grandmother identify herself with the protagonist of <em>Kashi Yatre</em>?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-4 pt-1 text-sm text-slate-700 border-t border-slate-100 bg-slate-50/50 leading-relaxed">
+            Krishtakka had never visited Kashi (Varanasi) to worship Lord Vishveshwara, nor had she received formal education. Like the elderly lady in Triveni's novel who had an ardent desire for salvation and selfless empathy, Krishtakka possessed deep faith and a compassionate heart. Hence, she identified completely with the character's journey.
+          </div>
+        </details>
+
+        <!-- Q2 -->
+        <details class="group bg-white/90 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <summary class="p-4 cursor-pointer flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Q2. Why was grandmother in tears when the narrator returned from the wedding?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-4 pt-1 text-sm text-slate-700 border-t border-slate-100 bg-slate-50/50 leading-relaxed">
+            In Sudha Murty’s absence, the weekly magazine arrived. Grandmother held the magazine, gazed at the pictures, and rubbed her hands over the Kannada letters, but was unable to read a single word. Her inability to find out what happened next in <em>Kashi Yatre</em> made her realize the crushing burden of her illiteracy, leaving her feeling helpless and tearful.
+          </div>
+        </details>
+
+        <!-- Q3 -->
+        <details class="group bg-white/90 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <summary class="p-4 cursor-pointer flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Q3. Why did the grandmother touch the feet of her 12-year-old granddaughter?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-4 pt-1 text-sm text-slate-700 border-t border-slate-100 bg-slate-50/50 leading-relaxed">
+            Traditionally, elders do not touch the feet of younger relatives. However, Krishtakka explained that she was touching the feet of her <span class="highlight-marker">Guru (Teacher)</span>, who had patiently guided her from illiteracy to self-reliance. She demonstrated that knowledge and teachers deserve absolute reverence regardless of age or gender.
+          </div>
+        </details>
+      </div>
+
+    </section>
+
+    <div class="border-t-2 border-dashed border-amber-900/20 my-10 pl-8 sm:pl-12 flex items-center justify-center relative">
+      <span class="bg-[#fdfbf7] px-4 text-slate-400 font-sans text-xs tracking-widest uppercase">
+        <i class="fa-solid fa-star text-amber-500 mr-1"></i> Kaveri Textbook • English Literature <i class="fa-solid fa-star text-amber-500 ml-1"></i>
+      </span>
+    </div>
+
+    <section id="chapter2-section" class="chapter-content pl-8 sm:pl-12 transition-all">
+      
+      <!-- Chapter Badge Banner corrected to Chapter 01 Poetry -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-900 border border-emerald-300 rounded-lg text-xs md:text-sm font-semibold tracking-wide uppercase">
+          <i class="fa-solid fa-flag text-emerald-600"></i> Chapter 01 Poetry (Kaveri)
+        </div>
+        <span class="handwriting text-emerald-800 text-sm font-semibold">Poet: Subramania Bharati (Mahakavi Bharati)</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-2 font-serif border-b border-dashed border-slate-300 pb-2">
+        Bharat Our Land
+      </h2>
+      <p class="text-sm md:text-base text-slate-600 italic mb-6">
+        "A stirring patriotic ode (प्रशंसात्मक गीत) celebrating India’s matchless geographic grandeur (भौगोलिक भव्यता), spiritual wisdom, and timeless civilizational greatness."
+      </p>
+
+      <!-- Sticky Note Quick Insight -->
+      <div class="my-6 sticky-note p-4 sm:p-5 rounded-lg border-l-4 border-emerald-500 max-w-xl mx-auto sm:ml-4">
+        <div class="handwriting text-slate-900 text-base md:text-lg">
+          <span class="font-bold text-emerald-900 block text-lg mb-1"><i class="fa-solid fa-heart text-red-500 mr-2"></i>Poetic Essence (कविता का सार):</span>
+          India is the "Golden Land" (स्वर्णिम भूमि)—she is peerless (अद्वितीय/जिसका कोई मुकाबला न हो), blessed with the mighty Himavant, generous Ganga, sacred Upanishads, and the peaceful teachings of Buddha.
+        </div>
+      </div>
+
+      <!-- About the Poet Card -->
+      <div class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm mb-6 flex flex-col md:flex-row gap-4 items-start">
+        <div class="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center text-emerald-700 text-2xl flex-shrink-0">
+          <i class="fa-solid fa-pen-nib"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 text-base sm:text-lg">About the Poet: Subramania Bharati (1882–1921)</h4>
+          <p class="text-sm text-slate-700 mt-1 leading-relaxed">
+            Mahakavi Subramania Bharati was a renowned Tamil poet, patriotic freedom fighter, and social reformer (समाज सुधारक). His passionate verses aroused national unity, pride in motherland Bharat, and inspired Indians to break the shackles of bondage.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white/70 backdrop-blur-sm p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm mb-8">
+        <h3 class="text-xl font-bold text-slate-850 mb-3 flex items-center gap-2 text-slate-900">
+          <i class="fa-solid fa-gem text-emerald-600"></i> Core Pillars & Detailed Breakdown of the Poem
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-800">
+          <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+            <h5 class="font-bold text-emerald-950 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-mountain text-emerald-700"></i> 1. Incomparable Physical Majesty (अतुलनीय प्राकृतिक सौंदर्य)
+            </h5>
+            <p class="leading-relaxed">
+              The poet praises the <span class="highlight-marker">mighty Himavant (Himalayas)</span> which has no equal on earth, and the <span class="highlight-marker">generous (उदार/दानशील) Ganga</span> whose graceful flow bestows fertility, purity, and life across the land.
+            </p>
+          </div>
+
+          <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+            <h5 class="font-bold text-blue-950 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-scroll text-blue-700"></i> 2. Deep Spiritual Foundations (आध्यात्मिक धरोहर)
+            </h5>
+            <p class="leading-relaxed">
+              India is sanctified (पवित्र) by the <span class="highlight-marker">sacred Upanishads</span>—holy scriptures (धार्मिक ग्रंथ) unmatched in philosophy. It is here that <strong>Brahma-knowledge (ब्रह्मज्ञान / ultimate truth)</strong> first took root and enlightened mankind.
+            </p>
+          </div>
+
+          <div class="p-4 bg-purple-50/50 rounded-xl border border-purple-100">
+            <h5 class="font-bold text-purple-950 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-dove text-purple-700"></i> 3. Legacy of Peace & Dhamma (शांति और सदाचार)
+            </h5>
+            <p class="leading-relaxed">
+              On this blessed land, <strong>Gautama Buddha</strong> preached his noble <em>Dhamma</em> (धर्म/सत्य का मार्ग), spreading boundless compassion (करुणा), harmony, and peace throughout the ancient world.
+            </p>
+          </div>
+
+          <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-100">
+            <h5 class="font-bold text-amber-950 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-amber-700"></i> 4. Gallant Warriors & Sages (वीर योद्धा एवं तपस्वी ऋषि)
+            </h5>
+            <p class="leading-relaxed">
+              Gallant (शूरवीर/साहसी) warriors protected this holy soil with supreme bravery, while venerable sages (तपस्वी संत) sanctified it through spiritual wisdom. All auspicious (शुभ/कल्याणकारी) virtues are found here.
+            </p>
+          </div>
+        </div>
+
+        <!-- Poetic Devices Note from Kaveri Syllabus -->
+        <div class="mt-4 p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-700">
+          <span class="font-bold text-slate-900 block mb-1"><i class="fa-solid fa-wand-magic-sparkles text-amber-600 mr-1.5"></i>Poetic Devices (साहित्यिक अलंकार):</span>
+          <span class="font-semibold text-slate-800">Ode (प्रशस्ति काव्य):</span> A lyrical poem expressing profound admiration and reverence. <br>
+          <span class="font-semibold text-slate-800">Hyperbole (अतिशयोक्ति):</span> Extreme deliberate exaggeration used to celebrate India's unique grandeur (e.g., <em>"there's no equal anywhere on earth"</em>).
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Themes of the Poem -->
+        <div class="bg-emerald-50/70 p-5 rounded-2xl border border-emerald-200">
+          <h4 class="font-bold text-emerald-950 text-base mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-palette text-emerald-700"></i> Poetic Themes (प्रमुख विषय)
+          </h4>
+          <ul class="space-y-2 text-sm text-slate-800">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+              <span><strong>Fervent Patriotism (प्रबल देशभक्ति):</strong> Celebrating the unmatched glory of motherland Bharat.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+              <span><strong>Hoary Antiquity (अति प्राचीन इतिहास):</strong> India’s ancient, unbroken heritage and wisdom across millennia.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+              <span><strong>Natural & Spiritual Wealth:</strong> Purity of the Ganga, loftiness of the Himalayas, and teachings of the Buddha.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Rapid Revision Flash Box -->
+        <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-bolt text-emerald-500"></i> Quick Memory Snapshot (त्वरित बिंदु)
+          </h4>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-700 handwriting font-semibold">
+            <li>✔ Written by Tamil poet-patriot Subramania Bharati.</li>
+            <li>✔ Hailed as peerless (अद्वितीय) <strong>"Golden Land"</strong>.</li>
+            <li>✔ Himavant signifies unshakeable stature and strength.</li>
+            <li>✔ Generous Ganga symbolizes holy purification and life.</li>
+            <li>✔ Sacred Upanishads represent profound ancient philosophy.</li>
+            <li>✔ Gautam Buddha preached non-violence, peace, and Dhamma.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="space-y-3 mb-6">
+        <h3 class="text-xl font-bold text-slate-850 flex items-center gap-2 text-slate-900">
+          <i class="fa-solid fa-circle-question text-emerald-600"></i> Essential Questions & Answers (महत्वपूर्ण प्रश्नोत्तर)
+        </h3>
+
+        <!-- Q1 -->
+        <details class="group bg-white/90 rounded-xl border border-slate-200 overflow-hidden shadow-sm" open>
+          <summary class="p-4 cursor-pointer flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Q1. What is the central idea / moral of the poem <em>Bharat Our Land</em>?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-4 pt-1 text-sm text-slate-700 border-t border-slate-100 bg-slate-50/50 leading-relaxed">
+            The poem is a patriotic tribute (श्रद्धांजलि) praising India's unparalleled natural magnificence, civilizational wisdom, and sacred spiritual heritage. It calls upon citizens to feel immense pride in their homeland and uphold its noble ethical traditions.
+          </div>
+        </details>
+
+        <!-- Q2 -->
+        <details class="group bg-white/90 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <summary class="p-4 cursor-pointer flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Q2. Why is India referred to as a "Golden Land" (स्वर्णिम भूमि)?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-4 pt-1 text-sm text-slate-700 border-t border-slate-100 bg-slate-50/50 leading-relaxed">
+            India is celebrated as the "Golden Land" not merely for agricultural fertility and material resources, but primarily for its golden spiritual heritage, eternal philosophical treatises (like the Upanishads), noble warriors, and moral greatness.
+          </div>
+        </details>
+
+        <!-- Q3 -->
+        <details class="group bg-white/90 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <summary class="p-4 cursor-pointer flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 transition">
+            <span>Q3. Why does the poet call the Ganga "generous" (उदार) and what do the Himalayas symbolize?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="p-4 pt-1 text-sm text-slate-700 border-t border-slate-100 bg-slate-50/50 leading-relaxed">
+            The poet describes the <strong>Ganga</strong> as "generous" because her holy waters selflessly nourish fields, sustain millions of lives, and wash away sins. The mighty <strong>Himavant (Himalayas)</strong> symbolizes steadfast protective power, unmatched elevation, and enduring strength.
+          </div>
+        </details>
+      </div>
+
+    </section>
+
+    <!-- Teacher Remarks, Exercise Link & Verification Section -->
+    <div class="mt-12 pt-6 border-t border-slate-300 pl-8 sm:pl-12 space-y-4">
+     
+
+      <!-- User Exercise Link with Hand Arrow -->
+      <div class="bg-amber-100/70 border border-amber-300/80 rounded-xl p-3.5 flex flex-wrap items-center gap-2 text-sm sm:text-base text-slate-800 shadow-sm">
+        <span class="text-amber-800 text-xl font-bold">👉</span>
+        <span class="font-bold text-slate-900">Your exercise link of this chapter:</span>
+        <a href="https://saraswatacademy.in/english_class9/kaveri/english-class-9-chapter-1.html" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-700 hover:text-indigo-900 underline underline-offset-2 break-all flex items-center gap-1">
+         English class 9-chapter-1 
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-between items-center gap-4 pt-2">
+        <div class="text-xs text-slate-500 font-sans">
+          Curriculum: Class IX (NCERT Kaveri English) 
+        </div>
+        <!-- Changed from "Verified by" to "Written by" -->
+        <div class="border-2 border-red-500/70 text-red-600 bg-red-50/50 rounded-lg px-3.5 py-1.5 text-xs sm:text-sm uppercase tracking-wider font-bold -rotate-2 select-none shadow-sm flex items-center gap-1.5">
+          <i class="fa-solid fa-feather-pointed"></i> Written by Pratap Sanjay Sir
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="quiz-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-100 relative max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-pen-to-square text-emerald-600"></i> Class 9 Revision Quiz
+        </h3>
+        <button onclick="closeQuizModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="mt-4 space-y-5" id="quiz-container">
+        <!-- Question 1 -->
+        <div class="quiz-item" data-answered="false">
+          <p class="font-semibold text-sm text-slate-800 mb-2">1. At what age did Krishtakka decide to learn the Kannada alphabet?</p>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">A) 55 years</button>
+            <button onclick="checkAnswer(this, true)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">B) 62 years</button>
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">C) 68 years</button>
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">D) 50 years</button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-item" data-answered="false">
+          <p class="font-semibold text-sm text-slate-800 mb-2">2. Which festival was chosen as the target deadline by the grandmother?</p>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">A) Diwali</button>
+            <button onclick="checkAnswer(this, true)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">B) Dassara</button>
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">C) Sankranti</button>
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">D) Ugadi</button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-item" data-answered="false">
+          <p class="font-semibold text-sm text-slate-800 mb-2">3. Who is the poet of the Chapter 1 poem "Bharat Our Land"?</p>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">A) Rabindranath Tagore</button>
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">B) Sarojini Naidu</button>
+            <button onclick="checkAnswer(this, true)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">C) Subramania Bharati</button>
+            <button onclick="checkAnswer(this, false)" class="quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left">D) Triveni</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-3 border-t border-slate-200 flex items-center justify-between">
+        <span id="quiz-score" class="text-xs font-semibold text-slate-700">Answer the questions above to test yourself!</span>
+        <button onclick="resetQuiz()" class="text-xs text-amber-700 hover:underline font-semibold">Reset Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Chapter Filtering
+    function filterChapter(type) {
+      const ch1 = document.getElementById('chapter1-section');
+      const ch2 = document.getElementById('chapter2-section');
+      
+      const tabAll = document.getElementById('tab-all');
+      const tab1 = document.getElementById('tab-ch1');
+      const tab2 = document.getElementById('tab-ch2');
+
+      // Reset button styles
+      [tabAll, tab1, tab2].forEach(btn => {
+        btn.className = "tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700";
+      });
+
+      if (type === 'all') {
+        ch1.classList.remove('hidden');
+        ch2.classList.remove('hidden');
+        tabAll.className = "tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-amber-500 text-slate-900 border-2 border-amber-400";
+      } else if (type === 'chapter1') {
+        ch1.classList.remove('hidden');
+        ch2.classList.add('hidden');
+        tab1.className = "tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-amber-500 text-slate-900 border-2 border-amber-400";
+      } else if (type === 'chapter2') {
+        ch1.classList.add('hidden');
+        ch2.classList.remove('hidden');
+        tab2.className = "tab-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-md bg-emerald-500 text-slate-900 border-2 border-emerald-400";
+      }
+    }
+
+    // Toggle All Accordions
+    let areOpen = false;
+    function toggleAllAccordions() {
+      const detailsList = document.querySelectorAll('details');
+      areOpen = !areOpen;
+      detailsList.forEach(item => {
+        item.open = areOpen;
+      });
+    }
+
+    // Modal Quiz Logic
+    function openQuizModal() {
+      document.getElementById('quiz-modal').classList.remove('hidden');
+    }
+
+    function closeQuizModal() {
+      document.getElementById('quiz-modal').classList.add('hidden');
+    }
+
+    let score = 0;
+    let questionsAnswered = 0;
+
+    function checkAnswer(button, isCorrect) {
+      const parent = button.closest('.quiz-item');
+      if (parent.dataset.answered === 'true') return;
+
+      parent.dataset.answered = 'true';
+      questionsAnswered++;
+
+      const siblings = parent.querySelectorAll('.quiz-opt');
+      siblings.forEach(btn => {
+        btn.disabled = true;
+        btn.classList.add('opacity-70');
+      });
+
+      if (isCorrect) {
+        button.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900', 'font-bold');
+        score++;
+      } else {
+        button.classList.add('bg-red-100', 'border-red-500', 'text-red-900', 'font-bold');
+      }
+
+      document.getElementById('quiz-score').innerText = `Score: ${score} / 3 answered!`;
+    }
+
+    function resetQuiz() {
+      score = 0;
+      questionsAnswered = 0;
+      document.querySelectorAll('.quiz-item').forEach(item => {
+        item.dataset.answered = 'false';
+        item.querySelectorAll('.quiz-opt').forEach(btn => {
+          btn.disabled = false;
+          btn.className = 'quiz-opt p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-left';
+        });
+      });
+      document.getElementById('quiz-score').innerText = 'Answer the questions above to test yourself!';
+    }
+  </script>
+</body>
+</html>
